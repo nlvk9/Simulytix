@@ -1,0 +1,23 @@
+# Build output
+build/
+
+# Xcode and macOS
+.DS_Store
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+Makefile2
+install_manifest.txt
+
+# Object files
+*.o
+
+# Generated binaries
+Simulytix
+
+# Editor swap files
+*~
+*.swp

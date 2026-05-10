@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BUILD_DIR="$SCRIPT_DIR/build"
+mkdir -p "$BUILD_DIR"
+cd "$BUILD_DIR"
+
+if [ ! -f "$BUILD_DIR/Makefile" ]; then
+    cmake .. -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release
+fi
+
+CPUS=$(sysctl -n hw.logicalcpu 2>/dev/null || nproc 2>/dev/null || echo 4)
+make -j"$CPUS"
+
+echo ""
+echo "▶ Launching Simulytix..."
+"$BUILD_DIR/Simulytix"
