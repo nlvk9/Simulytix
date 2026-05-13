@@ -119,6 +119,7 @@ cmake .. -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt@5
 - `CMakeLists.txt` — project build configuration
 - `BUILD.md` — legacy build notes
 - `sketch.h` — sample sketch support for the embedded editor
+- run `mkdir build && cd build && cmake ..` to generate this locally.
 
 ## License
 
