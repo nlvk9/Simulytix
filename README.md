@@ -116,7 +116,6 @@ cmake .. -DCMAKE_PREFIX_PATH=/opt/homebrew/opt/qt@5
 ## Repository layout
 
 - `src/` — application source code
-- `build/` — generated build artifacts and CMake cache
 - `CMakeLists.txt` — project build configuration
 - `BUILD.md` — legacy build notes
 - `sketch.h` — sample sketch support for the embedded editor
